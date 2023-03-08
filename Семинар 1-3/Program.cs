@@ -176,12 +176,12 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.Write("введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-for (int i = 2; i <= a; i+=2)
-{
-    Console.Write($"{i} ");
-}
+// Console.Write("введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// for (int i = 2; i <= a; i+=2)
+// {
+//     Console.Write($"{i} ");
+// }
 
 
 
