@@ -7,17 +7,17 @@
 
 int DegrNum(int number1, int number2)
 {
-  int result = 1;
-  for(int i=1; i <= number2; i++)
-  {
-    result = result * number1;
-  }
+    int result = 1;
+    for (int i = 1; i <= number2; i++)
+    {
+        result = result * number1;
+    }
     return result;
 }
 
-  Console.Write("Введите число 1: ");
-  int number1 = int.Parse(Console.ReadLine());
-  Console.Write("Введите число 2: ");
-  int number2 = int.Parse(Console.ReadLine());
-  int Degree = DegrNum(number1, number2);
-  Console.WriteLine("Ответ: " + Degree);
+Console.Write("Введите число 1: ");
+int number1 = int.Parse(Console.ReadLine());
+Console.Write("Введите число 2: ");
+int number2 = int.Parse(Console.ReadLine());
+int Degree = DegrNum(number1, number2);
+Console.WriteLine("Ответ: " + Degree);
