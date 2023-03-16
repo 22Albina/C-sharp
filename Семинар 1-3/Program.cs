@@ -194,3 +194,385 @@
 // Console.Write($"{count} ");
 // count++;
 // }
+
+
+// Задача 9: Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+// Например:
+// 78 -> 8
+// 12-> 2
+// 85 -> 8
+
+// int number = new Random().Next(10, 100);
+// Console.WriteLine($"случайное число из отрезка 10 - 99 -> {number}");
+// int firstDigit = number / 10;
+// int secondDigit = number % 10;
+// if (firstDigit > secondDigit)
+// {
+// Console.WriteLine($"Наибольшая цифра числа -> {firstDigit}");
+// }
+// else
+// {
+//     Console.WriteLine($"Наибольшая цифра числа -> {secondDigit}");
+// }
+//                      int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;  (если первое число больше второго, 
+//                                                                                         то выводим первое, иначе выводим второе
+//                                                                                          аналог if else. {Тернарный Оператор})
+//                      Console.WriteLine($"Наибольшая цифра числа -> {maxDigit}");
+
+///////////////////////////////////////////// Решение через метод
+// int result = MaxDigit(number);
+// Console.WriteLine($"Наибольшая цифра числа -> {result}");
+// int MaxDigit(int num)  // num = number
+// {
+//     int firstDigit = num / 10;
+//     int secondDigit = num % 10;
+//     int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
+//     return maxDigit;
+// }
+
+
+// Задача №11: Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.
+
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
+
+// int number = new Random().Next(100, 1000);
+// Console.WriteLine($"случайное число из отрезка 100 - 999 -> {number}");
+
+// int rsd = DeliteSecondDigit(number);
+// Console.WriteLine($"Полученный результат -> {rsd}");
+
+// int DeliteSecondDigit(int num)
+// {
+//     int firstDigit = num / 100;
+//     int thirdDigit = num % 10;
+//     int result = firstDigit * 10 + thirdDigit;
+//     return result;
+// }
+
+
+// Задача №12: Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. 
+// Если число 2 не кратно числу 1, то программа выводит остаток от деления.
+
+// 34, 5 -> не кратно, остаток 4
+// 16, 4 -> кратно
+
+// Console.Write("Введите число 1: ");
+// int firstDigit = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число 2: ");
+// int secondDigit = Convert.ToInt32(Console.ReadLine());
+
+// int number = MultipleDigit(firstDigit, secondDigit);
+
+// if (number == 0)
+//     Console.WriteLine("Число кратно");
+// else
+//     Console.WriteLine("Число не кратно, остаток: " + number);
+
+// int MultipleDigit(int num1, int num2)
+// {
+//     int remaider = num1 % num2;
+//     return remaider;
+// }
+
+// Задача №14: Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно
+// 7 и 23.
+
+// 14 -> нет
+// 46 -> нет
+// 161 -> да
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число 1-ое для кратности: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число 2- ое для кратности: ");
+// int number2 = Convert.ToInt32(Console.ReadLine());
+
+// bool result = MultipleDigit(number, number1, number2);  //number1 = 7;  number2 = 23
+// Console.WriteLine(result ? "Да" : "Нет");
+
+// bool MultipleDigit(int num, int num1, int num2)
+// {
+//     return (num % num1 == 0 && num % num2 == 0);
+// }
+
+
+//Задача № 16: Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+
+// 5, 25 -> да
+// -4, 16 -> да
+// 25, 5 -> да
+// 8,9 -> нет
+
+// Console.Write("Введите первое число: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе число: ");
+// int number2 = Convert.ToInt32(Console.ReadLine());
+
+// bool result = Sqr(number1, number2);
+// Console.WriteLine(result ? "ДА" : "НЕТ");
+
+// bool Sqr(int num1, int num2)
+// {
+//     return num1 * num1 == num2 || num2 * num2 == num1;
+// }
+
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// Console.Write("Введите трехзначное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int secondDigit = SecondDigit(number);
+// // if (number < 100 && number > 1000)
+// // {
+// //     Console.Write("Задано неверное число");
+// //     return;
+// // }
+// Console.WriteLine($"Полученный результат -> {secondDigit}");
+
+// int SecondDigit(int num)
+// {
+//     return (num / 10) % 10;
+// }
+
+
+
+
+
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+// Console.WriteLine("Введите число: ");
+// int a = int.Parse(Console.ReadLine());
+// if (a<100)
+// {
+//   Console.WriteLine("Третьей цифры нет");
+// }
+// else 
+// {
+//   while (a > 999)
+//   {
+//     a = a/10;
+//   }
+//   int thirdNumber = a % 10;
+//   Console.WriteLine($"Третья цифра числа {thirdNumber}");
+// }
+
+
+
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, 
+// является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+// Console.Write("Введи цифру соответствующую дню недели: ");
+// int a = int.Parse(Console.ReadLine());
+// int second = SecondDigit(a);
+
+// int SecondDigit(int a1)
+// {
+//     if (a1 == 6 || a1 == 7)
+//     {
+//         Console.WriteLine("этот день выходной");
+//     }
+//     if (a1 < 1 || a1 > 7)
+//     {
+//         Console.WriteLine("вы ошиблись, попробуйте еще раз");
+//     }
+//     if (a1 >= 1 & a1 <= 5)
+//     {
+//         Console.WriteLine("этот день не выходной");
+//     }
+// }
+
+
+
+
+// Задача №17. Напишите программу, которая принимает на вход координаты точки (X и Y),
+// причем X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
+
+// Console.Write("Введи координату Х точки: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введи координату Y точки: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int quarter = Quarter(x, y);
+// string result = quarter > 0 
+//                              ? $"Указанные координаты соответствуют четверти -> {quarter}"
+//                              : "Введены некорректные координаты";                          // тернарный оператор
+// Console.Write(result);
+
+// int Quarter(int x1, int y1)
+// {
+//     if (x1 > 0 && y1 > 0) return 1;
+//     if (x1 < 0 && y1 > 0) return 2;
+//     if (x1 < 0 && y1 < 0) return 3;
+//     if (x1 > 0 && y1 < 0) return 4;
+//     return 0;
+// }
+
+
+
+
+// Задача № 18: Напишите программу, которая по заданному номеру четверти, 
+// показывает диапазон возможных координат точек в этой четверти (x и y).
+
+// Console.Write("Введи номер четверти: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// string quarter = Quarter(number);
+
+// Console.Write(quarter);
+
+// string Quarter(int chetvert)
+// {
+//     if (chetvert == 1) return "x > 0, y > 0";
+//     if (chetvert == 2) return "x < 0, y > 0";
+//     if (chetvert == 3) return "x < 0, y < 0";
+//     if (chetvert == 4) return "x > 0, y < 0";
+//     return "Введена некорректная четверть";
+// }
+
+
+// Задача № 20: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
+// AB = √((xb - xa)2 + (yb - ya)2)
+
+// Console.Write("Введите координату X точки А: ");
+// int numx1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Y точки А: ");
+// int numy1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату X точки B: ");
+// int numx2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Y точки B: ");
+// int numy2 = Convert.ToInt32(Console.ReadLine());
+
+// double dlinna = Dlinna(numx1, numx2, numy1, numy2);
+
+// double Dlinna(int x1, int x2, int y1, int y2)
+// {
+//     int A = (x2-x1)*(x2-x1);
+//     int B = (y2-y1)*(y2-y1);
+//     double C = Math.Sqrt(A+B);
+//     return C;
+// } 
+// Console.Write("Расстояние между точками =  " + Math.Round (dlinna, 2, MidpointRounding.ToZero));
+
+
+
+// Задача № 22: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел
+// от 1 до N.
+
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Sqr(num);
+// void Sqr(int number)
+// {
+//     int count = 1;
+//     while (count <= number)
+//     {
+//         int result = count * count;
+//         Console.WriteLine($"{count, 3} -> {result, 5}"); // 3 и 5 длинна строки в которуюю пишется результат (для выравнивания)
+//         count++;
+//     }
+// }
+
+
+// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
+
+// Console.WriteLine("Введите пятизначное число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int a = num / 10000;
+// int b = num / 1000 % 10;
+// int c = num % 100 / 10;
+// int d = num % 10;
+
+// bool palindrom = Palindrom(a, b, c, d);
+// Console.WriteLine(palindrom ? "ПАЛИНДРОМ" : "НЕ ПАЛИНДРОМ");
+// if (num < 9999 || num > 99999)
+// {
+//     Console.WriteLine("Вы ввели неправильное число, повторите попытку");
+// }
+// bool Palindrom(int a1, int b1, int c1, int d1)
+// {
+//     return a == d && b == c;
+// }
+
+// Задача 21: Напишите программу, которая принимает на вход координаты двух точек и 
+// находит расстояние между ними в 3D пространстве.
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+// Console.Write("Введите координату X точки А: ");
+// int numx1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Y точки А: ");
+// int numy1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Z точки А: ");
+// int numz1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите координату X точки B: ");
+// int numx2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Y точки B: ");
+// int numy2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Z точки B: ");
+// int numz2 = Convert.ToInt32(Console.ReadLine());
+
+// double dlinna = Dlinna(numx1, numx2, numy1, numy2, numz1, numz2);
+
+// double Dlinna(int x1, int x2, int y1, int y2, int z1, int z2)
+// {
+//     int A = (x2-x1)*(x2-x1);
+//     int B = (y2-y1)*(y2-y1);
+//     int C = (z2-z1)*(z2-z1);
+//     double result = Math.Sqrt(A+B+C);
+//     return result;
+// } 
+// Console.Write("Расстояние между точками =  " + Math.Round (dlinna, 2, MidpointRounding.ToZero));
+
+
+
+
+// Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Sqr(num);
+// void Sqr(int number)
+// {
+//     int count = 1;
+//     while (count <= number)
+//     {
+//         int result = count * count * count;
+//         Console.WriteLine($"{count, 3} -> {result, 5}"); // 3 и 5 длинна строки в которуюю пишется результат (для выравнивания)
+//         count++;
+//     }
+// }

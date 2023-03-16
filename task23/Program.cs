@@ -4,12 +4,26 @@
 // 5 -> 1, 8, 27, 64, 125
 
 
-Console.Write("Ввведите число: ");
-int N = int.Parse(Console.ReadLine());
-int x = 1;
-while (x <= N)
+Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Сube(num);
+void Сube(int number)
 {
-    int y = x * x * x;
-    x++;
-    Console.WriteLine(y);
+    int count = 1;
+    while (count <= number)
+    {
+        int result = count * count * count;
+        Console.WriteLine($"{count, 3} -> {result, 5}"); // 3 и 5 длинна строки в которуюю пишется результат (для выравнивания)
+        count++;
+    }
 }
+
+// Console.Write("Ввведите число: ");
+// int N = int.Parse(Console.ReadLine());
+// int x = 1;
+// while (x <= N)
+// {
+//     int y = x * x * x;
+//     x++;
+//     Console.WriteLine(y);
+// }
