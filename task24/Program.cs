@@ -3,24 +3,40 @@
 // 4 -> 10
 // 8 -> 36
 
+ Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int GetSumNums(int number)
+int sumNumbers = SumNumbers(number);
+Console.Write($"Сумма чисел от 1 до {number} = {sumNumbers}");
+
+int SumNumbers(int num)
 {
     int sum = 0;
-    while(number > 0)
+    for (int i = 1; i <= num; i++)
     {
-        sum = sum + number;
-        number--;
+        sum = sum + i; // sum += i тоже самое
     }
     return sum;
 }
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
 
-// int num2 = int.Parse(Console.ReadLine());          // Можно вызвать один метод несколько раз, не прописывая его для каждой переменной.
+
+// int GetSumNums(int number)
+// {
+//     int sum = 0;
+//     while(number > 0)
+//     {
+//         sum = sum + number;
+//         number--;
+//     }
+//     return sum;
+// }
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine());
+
+// int num2 = int.Parse(Console.ReadLine());   // Можно вызвать один метод несколько раз, не прописывая его для каждой переменной.
 // int num3 = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
+// Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
 // Console.WriteLine($"Сумма цифр = {GetSumNums(num2)}");
 // Console.WriteLine($"Сумма цифр = {GetSumNums(num3)}");
 

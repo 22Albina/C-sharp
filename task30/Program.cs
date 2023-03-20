@@ -2,26 +2,22 @@
 // [1,0,1,1,0,1,0,0]
 
 
-void FillArray(int[] array)
-{
-    int length = array.Length;
+int[] array = new int[8];
+Array(array);
+PrintArray(array);
 
-    for (int index = 0; index < length; index++)
+void Array(int [] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[index] = new Random().Next(0, 2);
-        // Console.Write(array[index] + " ");              // Промежуточный вывод массива
+        arr[i] = new Random().Next(0, 2);
     }
 }
 
-void PrintArray(int[] mas)
+void PrintArray(int [] printarray)
 {
-    int len = mas.Length;
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < printarray.Length; i++)
     {
-        Console.Write(mas[i] + " ");
+        Console.Write(printarray[i] + " ");
     }
 }
-
- int[] arr = new int[8];
-FillArray(arr);
- PrintArray(arr);

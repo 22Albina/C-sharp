@@ -5,7 +5,15 @@
 // 2, 4 -> 16
 
 
-int DegrNum(int number1, int number2)
+Console.WriteLine("Введите Первое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Второе число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+int degre = Degree(num1, num2);
+Console.WriteLine("Ответ: " + degre);
+
+int Degree(int number1, int number2)
 {
     int result = 1;
     for (int i = 1; i <= number2; i++)
@@ -14,10 +22,3 @@ int DegrNum(int number1, int number2)
     }
     return result;
 }
-
-Console.Write("Введите число 1: ");
-int number1 = int.Parse(Console.ReadLine());
-Console.Write("Введите число 2: ");
-int number2 = int.Parse(Console.ReadLine());
-int Degree = DegrNum(number1, number2);
-Console.WriteLine("Ответ: " + Degree);
