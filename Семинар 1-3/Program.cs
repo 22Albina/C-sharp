@@ -576,3 +576,194 @@
 //         count++;
 //     }
 // }
+
+
+
+// Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int sumNumbers = SumNumbers(number);
+// Console.Write($"Сумма чисел от 1 до {number} = {sumNumbers}");
+
+// int SumNumbers(int num)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         sum = sum + i; // sum += i тоже самое
+//     }
+//     return sum;
+// }
+
+
+
+// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int countDigit = CountDigit(number);
+// Console.WriteLine($"Колличество цифр в числе {number}: {countDigit}");
+
+// int CountDigit(int num)
+// {
+//     int count = 0;
+// while (num > 0 || num < 0)  // (num != 0)  можно и так
+// {
+//     count++;
+//     num /= 10;
+// }
+// return count;
+// }
+
+
+// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24
+// 5 -> 120
+
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int factorial = Factorial(number);
+// Console.Write($"Произведение чисел от 1 до {number} = {factorial}");
+
+// int Factorial(int num)
+// {
+//     int multi = 1;
+//     for (int i = 2; i <= num; i++)
+//     {
+//         checked  // если памяти в int не хватит при умножении то выдаст ошибку
+//         {
+//             multi *= i; // multi = multi * i тоже самое
+//         }
+//     }
+//     return multi;
+// }
+
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+// int[] array = new int[8];
+// Array(array);
+// PrintArray(array);
+
+// void Array(int [] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0, 2);
+//     }
+// }
+
+// void PrintArray(int [] printarray)
+// {
+//     for (int i = 0; i < printarray.Length; i++)
+//     {
+//         Console.Write(printarray[i] + " ");
+//     }
+// }
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+// Console.WriteLine("Введите Первое число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Второе число: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// int degre = Degree(num1, num2);
+// Console.WriteLine("Ответ: " + degre);
+
+// int Degree(int number1, int number2)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= number2; i++)
+//     {
+//         result = result * number1;
+//     }
+//     return result;
+// }
+
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
+// Console.Write("Введите число: ");
+// int number = int.Parse(Console.ReadLine());
+
+// int sumNumber = SumNumber(number);
+// Console.WriteLine("Сумма цифр: " + sumNumber);
+
+//   int SumNumber(int number)
+//   {
+//     int count = Convert.ToString(number).Length;
+//     int advance = 0;
+//     int temp = 0;
+
+//     for (int i = 0; i < count; i++)
+//     {
+//       advance = number - number % 10;
+//       temp = temp + (number - advance);
+//       number = number / 10;
+//     }
+//    return temp;
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+//Задача № 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33 -> [6, 1, 33]
+
+
+// int[] array = new int[8];
+// Array(array);
+// PrintArray(array);
+
+// void Array(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0, 101);
+//     }
+// }
+
+// void PrintArray(int[] printarray)
+// {
+//     for (int i = 0; i < printarray.Length; i++)
+//     {
+//         Console.Write(printarray[i] + " ");
+//     }
+// }
