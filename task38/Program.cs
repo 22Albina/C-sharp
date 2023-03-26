@@ -15,7 +15,7 @@ double[] CreateArrayRndDouble(int siie, int min, int max, int round = 1)
     return arr;
 }
 
-double MinMax(double[] array, double min, double max)
+double MinMax(double[] array, double min, double max)   // double min, double max это можно убрать
 {
     double minnum = array[0];
     double maxnum = array[0];
@@ -47,5 +47,5 @@ void PrintMinMax(double[] array)
 double[] array = CreateArrayRndDouble(4, -10, 10);
 PrintMinMax(array);
 Console.WriteLine();
-double result = MinMax(array, 0, 0);
+double result = MinMax(array, 0, 0);   // 0, 0, можно тогда тоже надо убрать (смотри 18 строку)
 Console.WriteLine($"Разница между максимальным и минимальным значением = {result}");
