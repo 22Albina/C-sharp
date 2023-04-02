@@ -28,7 +28,18 @@ int[,] CreateMatrix(int rows, int columns, int min, int max)
     return matrix;
 }
 
-
+void PrintMatrix(int[,] matrix2)
+{
+    for (int i = 0; i < matrix2.GetLength(0); i++)
+    {
+        Console.Write("|");
+        for (int j = 0; j < matrix2.GetLength(1); j++)
+        {
+            Console.Write($"{matrix2[i, j],4} ");
+        }
+        Console.WriteLine("|");
+    }
+}
 
 int MinSumLine(int[,] array)
 {
@@ -55,8 +66,8 @@ int MinSumLine(int[,] array)
     return row;
 }
 
-int[,] array2d = CreateMatrix(4, 4, 0, 5);
+int[,] array2d = CreateMatrix(4, 4, 0, 10);
 Console.WriteLine("Исходный массив");
 PrintMatrix(array2d);
 Console.WriteLine();
-Console.WriteLine($"Строка с наименьшей суммой - {MinSumLine(array2d)}");
+Console.WriteLine($"{MinSumLine(array2d)} - строка с наименьшей суммой");
