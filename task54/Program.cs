@@ -8,13 +8,13 @@
 // 9 5 3 2
 // 8 4 4 2
 
-// int[,] array2d = CreateMatrix(4, 4, -10, 10);
-// Console.WriteLine("Исходный массив");
-// PrintMatrix(array2d);
-// Console.WriteLine();
-// RegularizeMatrix(array2d);
-// Console.WriteLine("Измененный массив");
-// PrintMatrix(array2d);
+int[,] array2d = CreateMatrix(4, 4, -10, 10);
+Console.WriteLine("Исходный массив");
+PrintMatrix(array2d);
+Console.WriteLine();
+RegularizeMatrix(array2d);
+Console.WriteLine("Измененный массив");
+PrintMatrix(array2d);
 
 
 

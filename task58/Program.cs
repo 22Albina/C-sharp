@@ -69,17 +69,17 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-// int[,] martrix1 = CreateMatrix(3, 3, 0, 5);
-// Console.WriteLine("Матрица 1:");
-// PrintMatrix(martrix1);
-// Console.WriteLine();
+int[,] martrix1 = CreateMatrix(3, 3, 0, 5);
+Console.WriteLine("Матрица 1:");
+PrintMatrix(martrix1);
+Console.WriteLine();
 
-// int[,] martrix2 = CreateMatrix(3, 3, 0, 5);
-// Console.WriteLine("Матрица 2:");
-// PrintMatrix(martrix2);
-// Console.WriteLine();
+int[,] martrix2 = CreateMatrix(3, 3, 0, 5);
+Console.WriteLine("Матрица 2:");
+PrintMatrix(martrix2);
+Console.WriteLine();
 
-// int[,] matrixMultiply = CreateMatrix(3, 3, 0, 5);
-// MultiplyMatrix(martrix1, martrix2, matrixMultiply);
-// Console.WriteLine("Произведение матриц:");
-// PrintMatrix(matrixMultiply);
+int[,] matrixMultiply = CreateMatrix(3, 3, 0, 5);
+MultiplyMatrix(martrix1, martrix2, matrixMultiply);
+Console.WriteLine("Произведение матриц:");
+PrintMatrix(matrixMultiply);

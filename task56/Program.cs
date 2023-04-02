@@ -66,8 +66,8 @@ int MinSumLine(int[,] array)
     return row;
 }
 
-// int[,] array2d = CreateMatrix(4, 4, 0, 10);
-// Console.WriteLine("Исходный массив");
-// PrintMatrix(array2d);
-// Console.WriteLine();
-// Console.WriteLine($"{MinSumLine(array2d)} - строка с наименьшей суммой");
+int[,] array2d = CreateMatrix(4, 4, 0, 10);
+Console.WriteLine("Исходный массив");
+PrintMatrix(array2d);
+Console.WriteLine();
+Console.WriteLine($"{MinSumLine(array2d)} - строка с наименьшей суммой");
