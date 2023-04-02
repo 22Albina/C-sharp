@@ -28,18 +28,7 @@ int[,] CreateMatrix(int rows, int columns, int min, int max)
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix2)
-{
-    for (int i = 0; i < matrix2.GetLength(0); i++)
-    {
-        Console.Write("|");
-        for (int j = 0; j < matrix2.GetLength(1); j++)
-        {
-            Console.Write($"{matrix2[i, j],4} ");
-        }
-        Console.WriteLine("|");
-    }
-}
+
 
 int MinSumLine(int[,] array)
 {
