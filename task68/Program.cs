@@ -14,13 +14,13 @@ Console.WriteLine($"Ответ: {result}");
 
 
 
-int Akker(int m, int n)
+int Akker(int num1, int num2)
 {
-    {
-        if (m == 0) 
-        return n + 1;
-        else if (n == 0) 
-        return Akker(m - 1, 1);
-        else return Akker(m - 1, Akker(m, n - 1));
-    }
+    if (num1 < 0 || num2 < 0) return 0;
+    if (num1 == 0)
+    return num2 + 1;
+    else if (num2 == 0)
+    return Akker(num1 - 1, 1);
+    return Akker(num1 - 1, Akker(num1, num2 - 1));
+
 }
